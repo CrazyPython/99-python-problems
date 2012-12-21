@@ -5,7 +5,7 @@ list = [0, 1, 2, 3, 4, 5]
 
 list[-1] # Negative indexing
 
-list[len(ls)-1] # Explicit
+list[len(list)-1] # Explicit
 
 # As a function
 
