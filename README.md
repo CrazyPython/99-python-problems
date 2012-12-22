@@ -1,4 +1,4 @@
-99 List Problems in Python
+99 Lisp Problems in Python
 ==========================
 
 I got 99 problems but a constrictor ain't one::
