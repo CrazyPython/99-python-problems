@@ -3,7 +3,7 @@
 
 list = [0, 1, 2, 3, 4, 5]
 
-# Reverse a list - modifies the list in place
+# Using the reverse function - modifies the list in place
 
 def reverse1(list):
     list.reverse()
@@ -14,6 +14,18 @@ def reverse1(list):
 def reverse2(list):
     return list[::-1]
 
-# Keeps returning the same result because the list in the variable being
-# passed is not being changed when it runs. So, you get the same result
-# because you are seeing the shallow copy created by the slicing operations.
+# Reverse2 keeps returning the same result because the list being
+# passed is not itself being changed when the function runs. So, you
+# get the same result because you are seeing the shallow copy created
+# by the slicing operation and not a modified version of the original
+# list. Viz:
+
+ls = ['a', 'b', 'c']
+
+reverse1(ls)
+print(ls)  # ['c', 'b', 'a'] - modified in place
+reverse1(ls)
+print(ls)  # back to original
+
+reverse2(ls) # ['c', 'b', 'a'] - shallow copy
+print(ls)    # ['a', 'b', 'c'] - original unmodified
